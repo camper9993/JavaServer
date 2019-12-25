@@ -35,12 +35,23 @@ public class ModulesController {
         return moduleInfos;
     }
 
+    @GetMapping(value = "/info/{id}")
+    public ModuleInfo getModuleInfo(@PathVariable("id") int id) {
+        for (ModuleInfo m: moduleInfos) {
+            if (m.getId() == id) {
+                return m;
+            }
+        }
+        return null;
+    }
+
+    int i  = 0;
     @GetMapping(value = "/{id}")
     public List<Lesson> getModulesById(@PathVariable("id") int id) {
         return Arrays.asList(
-                new Lesson(1, id, "Hello world", 1, "Kotlin", getFileTextById("testfile")),
-                new Lesson(2, id, "Lesson 2",    1, "Kotlin", "chapter01"),
-                new Lesson(3, id, "Lesson 3",    1, "Kotlin", "chapter02")
+                new Lesson(i++, id, "Hello world", 1, "Kotlin", getFileTextById("testfile")),
+                new Lesson(i++, id, "Lesson 2",    1, "Kotlin", "chapter01"),
+                new Lesson(i++, id, "Lesson 3",    1, "Kotlin", "chapter02")
         );
     }
 

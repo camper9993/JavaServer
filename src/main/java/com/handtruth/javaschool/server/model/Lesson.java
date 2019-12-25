@@ -14,13 +14,13 @@ public class Lesson {
 
     private String content;
 
-    public Lesson(int id, int module_id, String name, int lessonPoints, String skills, String contentPath) {
+    public Lesson(int id, int module_id, String name, int lessonPoints, String skills, String content) {
         this.id = id;
         this.module_id = module_id;
         this.name = name;
         this.lessonPoints = lessonPoints;
         this.skills = skills;
-        this.content = contentPath;
+        this.content = content;
     }
 
     public int getId() {
@@ -55,12 +55,12 @@ public class Lesson {
         this.skills = skills;
     }
 
-    public String getContentPath() {
+    public String getContent() {
         return content;
     }
 
-    public void setContentPath(String contentPath) {
-        this.content = contentPath;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public int getModule_id() {
