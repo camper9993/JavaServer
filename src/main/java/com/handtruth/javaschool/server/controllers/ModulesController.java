@@ -49,9 +49,9 @@ public class ModulesController {
     @GetMapping(value = "/{id}")
     public List<Lesson> getModulesById(@PathVariable("id") int id) {
         return Arrays.asList(
-                new Lesson(i++, id, "Hello world", 1, "Kotlin", getFileTextById("testfile")),
-                new Lesson(i++, id, "Lesson 2",    1, "Kotlin", "chapter01"),
-                new Lesson(i++, id, "Lesson 3",    1, "Kotlin", "chapter02")
+                new Lesson(0 + 3*id, id, "Hello world", 1, "Kotlin", getFileTextById("testfile")),
+                new Lesson(1 + 3*id, id, "Lesson 2",    1, "Kotlin", "chapter01"),
+                new Lesson(2 + 3*id, id, "Lesson 3",    1, "Kotlin", "chapter02")
         );
     }
 

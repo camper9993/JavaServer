@@ -25,10 +25,16 @@ public class AuthController {
     private Map<String, String> tokenTable = new HashMap<>();
 
     {
-        userDatabase.put("admin@test.test", new AllUserData(
-                        new UserDetail("Lexa", "Danilov", "20", "admin@test.test", "simple123456"),
+        userDatabase.put("admin0@test.test", new AllUserData(
+                        new UserDetail("Lexa", "Danilov", "20", "admin0@test.test", "simple123456"),
                         Arrays.asList(0, 1),
                         Collections.singletonList(0)
+                )
+        );
+        userDatabase.put("admin1@test.test", new AllUserData(
+                        new UserDetail("Lexa", "Romanov", "20", "admin1@test.test", "simple123456"),
+                        Collections.emptyList(),
+                        Collections.emptyList()
                 )
         );
     }
