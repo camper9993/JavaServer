@@ -24,7 +24,7 @@ import java.io.InputStream;
 @RequestMapping(value = "/file")
 public class FileController {
 
-    private static final String resource = "/Users/lexcorp/IdeaProjects/javaschool-server/src/main/resources/static";
+    private static final String resource = "/Users/Alex/IdeaProjects/javaschool-server/src/main/resources/static";
 
     @GetMapping(value = "/image/{id}", produces = MediaType.IMAGE_PNG_VALUE)
     public ResponseEntity<byte[]> getImage(@PathVariable String id) {

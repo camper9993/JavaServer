@@ -56,7 +56,7 @@ public class ModulesController {
     }
 
 
-    private static final String resource = "/Users/lexcorp/IdeaProjects/javaschool-server/src/main/resources/static";
+    private static final String resource = "/Users/Alex/IdeaProjects/javaschool-server/src/main/resources/static";
 
     private String getFileTextById(String id) {
         File file = new File(resource.concat("/" + id).concat(".txt"));
